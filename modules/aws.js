@@ -26,7 +26,8 @@ module.exports = function(robot) {
 				if (services.indexOf(results[i].p) !== -1) {
 					var service = results[i].p.replace("Amazon ", '').replace("Elastic Compute Cloud", "EC2");
 					i++;
-					robot.say(room, service + ': ' + results[i].p);
+					var status = (results[i].div) ? results[i].div[0] : results[i];
+					robot.say(room, service + ': ' + status.p);
 				}
 			};
 		});
