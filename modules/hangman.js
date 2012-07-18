@@ -18,11 +18,10 @@ var Game;
 function Game(robot, room) {
 	this.robot = robot;
 	this.room = room;
-	if (robot.config.wordnikApiKey == "") {
+	if (!robot.config.wordnikApiKey) {
 		robot.say(room, "I need a Wordnik API Key!");
-	} else {
-		this.generateWord();
 	}
+	this.generateWord();
 }
 
 Game.prototype.word = "hangman";
@@ -49,7 +48,7 @@ Game.prototype.generateWord = function() {
 			api_key: self.robot.config.wordnikApiKey
 		},
 		onSuccess: function(result) {
-			if (result) {
+			if (result.word) {
 				self.word = result.word;
 			}
 			self.word = self.word.toUpperCase();
