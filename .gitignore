@@ -1,0 +1,15 @@
+.DS_Store
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Nodejs
+node_modules
+npm-debug.log
+
+# OmniBot
+test/settings.js
