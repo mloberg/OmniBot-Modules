@@ -2,12 +2,11 @@
   "name": "omnibot-modules",
   "version": "0.0.1",
   "dependencies": {
-    "coffee-script": "1.4.0",
-    "omnibot": "0.2.0",
     "yql": "0.4.7",
     "sax": "0.4.2"
   },
   "devDependencies": {
+    "coffee-script": "1.4.0",
     "jasmine-node": "1.0.26",
     "scoped-http-client": "0.9.7"
   },
